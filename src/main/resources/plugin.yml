@@ -1,0 +1,21 @@
+name: Softmute
+version: ${project.version}
+main: com.azalelnation.softmute.Softmute
+api-version: 1.13
+softdepend: [Essentials]
+authors: [GriefPrevention, Shivelight]
+description: Mute players without them knowing.
+website: https://github.com/AzalelNation
+commands:
+  softmute:
+    description: Softmute main command.
+    usage: /softmute <player>
+permissions:
+  softmute.eavesdrop:
+    description: Receive muted player message.
+    default: op
+  softmute.use:
+    description: Allows softmute command.
+    default: op
+    children:
+      softmute.eavesdrop: true
